@@ -16,7 +16,7 @@ const articleImageSrc: ComputedRef<string> = computed(() => {
 <div class="article">
     <div class="article__img"></div>
     <h2 class="article__title">{{ article.title }}</h2>
-    <NuxtLink class="article__openedBtn" :to="article.link">Читать</NuxtLink>
+    <BaseBtnLink :to="article.link" />
 </div>
 </template>
 
@@ -57,19 +57,5 @@ const articleImageSrc: ComputedRef<string> = computed(() => {
     font-style: normal;
     font-weight: 800;
     line-height: 30px;
-}
-
-.article__openedBtn {
-    display: inline-block;
-    margin-top: auto;
-    padding: 10px 50px;
-    border-radius: 2px;
-    background-color: #1b1b1b;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
 }
 </style>

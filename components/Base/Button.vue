@@ -8,7 +8,7 @@ defineProps<Props>();
 
 <template>
 <button class="btn" :type="btnType">
-    <slot>Ok</slot>
+    <slot>Подписаться</slot>
 </button>
 </template>
 

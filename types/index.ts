@@ -6,9 +6,11 @@ export interface Meta {
     slug: string,
 };
 
+export type ArticleLink = `/article-${number}`;
+
 export interface Article {
     title: string, 
-    link: `/article-${number}`, 
+    link: ArticleLink, 
     image: `https://devtwit8.ru/img/${string}.${string}`,
 };
 
