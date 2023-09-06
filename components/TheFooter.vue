@@ -2,7 +2,9 @@
 <footer class="footer">
     <div class="info">
         <div class="about">
-            <IconsLogo class="logo" />
+            <NuxtLink class="logoLink" to="/">
+                <IconsLogo />
+            </NuxtLink>
             <p class="description">Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая мир эстетики и креативности</p>
         </div>
         <div class="links">
@@ -64,7 +66,8 @@
     }
 }
 
-.logo {
+.logoLink {
+    display: block;
     margin-bottom: 20px;
 }
 

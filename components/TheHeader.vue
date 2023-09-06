@@ -3,7 +3,9 @@
 
 <template>
 <header class="header">
-    <IconsLogo />
+    <NuxtLink to="/">
+        <IconsLogo />
+    </NuxtLink>
 </header>
 </template>
 
