@@ -12,4 +12,11 @@ export default defineNuxtConfig({
     '~/assets/styles/main.scss',
   ],
   ssr: true,
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'ru',
+      },
+    },
+  },
 });

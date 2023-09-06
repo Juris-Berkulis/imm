@@ -45,13 +45,14 @@ const quotesUrl: ComputedRef<string> = computed(() => {
     font-weight: 400;
     line-height: 26px;
 
-    &:last-of-type {
-        margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
 .serverHtml > blockquote {
     position: relative;
+    margin-top: 40px;
     padding-left: 116px;
     color: #1b1b1b;
     font-family: Montserrat;
@@ -85,5 +86,24 @@ const quotesUrl: ComputedRef<string> = computed(() => {
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+}
+
+.serverHtml > ul {
+    margin-bottom: 20px;
+    padding-left: 116px;
+}
+
+.serverHtml > ul > li {
+    margin-bottom: 5px;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 </style>

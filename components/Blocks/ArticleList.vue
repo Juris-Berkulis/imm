@@ -14,10 +14,19 @@ const articlesList: ComputedRef<Array<Article>> = computed(() => {
 
 <template>
 <section>
-    <h2>{{ payload.data.title }}</h2>
+    <h2 class="title">{{ payload.data.title }}</h2>
     <ArticlesList :articlesList="articlesList" />
 </section>
 </template>
 
 <style scoped lang="scss">
+.title {
+    margin-bottom: 50px;
+    color: #1b1b1b;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 46px;
+}
 </style>

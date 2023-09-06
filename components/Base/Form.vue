@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const inputId: string = Date.now().toString();
+</script>
+
 <template>
-<form class="form" @submit="console.log('Подписка оформлена')" method="post">
-    <label class="form__label" for="input">Подпишитесь на рассылку</label>
-    <input class="form__input" type="text" id="input" placeholder="Email">
+<form class="form" @submit.prevent="console.log('Подписка оформлена')" method="post">
+    <label class="form__label" :for="inputId">Подпишитесь на рассылку</label>
+    <input class="form__input" type="text" :id="inputId" placeholder="Email">
     <BaseButton btnType="submit" />
 </form>
 </template>
