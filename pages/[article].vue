@@ -10,23 +10,32 @@ const {data: response} = await useFetch(`http://devtwit8.ru/api/v1/page/?path=${
 const blocksList: ComputedRef<Array<Block>> = computed(() => {
     return response.value?.body || []
 });
-
-console.log(response.value)
 </script>
 
 <template>
 <article>
     <template v-for="block of blocksList" :key="block.id">
-        <BlocksArticleIntro v-if="block.type === 'article_intro_block'" :payload="block" />
-        <BlocksArticleList v-else-if="block.type === 'article_list_block'" :payload="block" />
-        <BlocksCtaForm v-else-if="block.type === 'cta_form_block'" :payload="block" />
-        <BlocksImage v-else-if="block.type === 'image_block'" :payload="block" />
-        <BlocksSubscribeForm v-else-if="block.type === 'subscribe_form_block'" :payload="block" />
-        <BlocksText v-else-if="block.type === 'text_block'" :payload="block" />
-        <BlocksSlider v-else-if="block.type === 'slider_block'" :payload="block" />
+        <BlocksArticleIntro class="section" v-if="block.type === 'article_intro_block'" :payload="block" />
+        <BlocksArticleList class="section" v-else-if="block.type === 'article_list_block'" :payload="block" />
+        <BlocksCtaForm class="section" v-else-if="block.type === 'cta_form_block'" :payload="block" />
+        <BlocksImage class="section" v-else-if="block.type === 'image_block'" :payload="block" />
+        <BlocksSubscribeForm class="section" v-else-if="block.type === 'subscribe_form_block'" :payload="block" />
+        <BlocksText class="section" v-else-if="block.type === 'text_block'" :payload="block" />
+        <BlocksSlider class="section" v-else-if="block.type === 'slider_block'" :payload="block" />
     </template>
 </article>
 </template>
 
 <style scoped lang="scss">
+.section {
+    padding: 50px 0;
+
+    &:first-of-type {
+        padding-top: 0;
+    }
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
 </style>
