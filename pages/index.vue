@@ -4,7 +4,7 @@ import { FetchResponse, Article } from '~/types';
 const route = useRoute();
 
 const { data: response } = await useFetch(`http://devtwit8.ru/api/v1/page/?path=${route.fullPath}`, {
-    transform: (data: FetchResponse) => data,
+    transform: (data: FetchResponse<'home'>) => data,
 });
 
 const articlesList: ComputedRef<Article[]> = computed(() => {
