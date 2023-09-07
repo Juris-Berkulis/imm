@@ -34,6 +34,12 @@ defineProps<Props>();
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
+    @media (max-width: 1040px) {
+        & {
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 .figure {
@@ -42,6 +48,14 @@ defineProps<Props>();
     aspect-ratio: calc(540 / 580);
     border-top-right-radius: 40%;
     overflow: hidden;
+
+    @media (max-width: 1040px) {
+        & {
+            width: 100%;
+            min-width: 0;
+            max-width: 540px;
+        }
+    }
 }
 
 .img {
@@ -64,6 +78,13 @@ defineProps<Props>();
     font-style: normal;
     font-weight: 800;
     line-height: 66px;
+
+    @media (max-width: 480px) {
+        & {
+            font-size: 42px;
+            line-height: 48px;
+        }
+    }
 }
 
 .additionally {

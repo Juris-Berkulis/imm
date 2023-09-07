@@ -33,14 +33,17 @@ defineProps<Props>();
     gap: 60px;
     padding: 60px;
     background-color: #1b1b1b;
+
+    @media (max-width: 1040px) {
+        & {
+            flex-direction: column;
+        }
+    }
 }
 
 .img {
+    width: 100%;
     max-width: 595px;
-}
-
-.primary {
-    flex-shrink: 1;
 }
 
 .title {
@@ -54,6 +57,7 @@ defineProps<Props>();
 }
 
 .form__input {
+    margin-right: 25px;
     margin-bottom: 25px;
 
     &:last-of-type {

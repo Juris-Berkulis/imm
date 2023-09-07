@@ -25,25 +25,35 @@ const nextImg = (): void => {
 </script>
 
 <template>
-<section class="section">
-    <button class="btn prev" @click="prevImg">
-        <IconsArrow />
-    </button>
-    <button class="btn next" @click="nextImg">
-        <IconsArrow />
-    </button>
-    <template v-for="src, index of payload.data" :key="src">
-        <figure class="figure" v-if="index === indexOfOpenedImg">
-            <img class="img" :src="src" :alt="src">
-        </figure>
-    </template>
+<section>
+    <div class="container">
+        <button class="btn prev" @click="prevImg">
+            <IconsArrow />
+        </button>
+        <button class="btn next" @click="nextImg">
+            <IconsArrow />
+        </button>
+        <template v-for="src, index of payload.data" :key="src">
+            <figure class="figure" v-if="index === indexOfOpenedImg">
+                <img class="img" :src="src" :alt="src">
+            </figure>
+        </template>
+    </div>
     <div class="pagination">{{ numberOfOpenedImg }} / {{ payload.data.length }}</div>
 </section>
 </template>
 
 <style scoped lang="scss">
-.section {
+.container {
     position: relative;
+    margin: 0 114px 25px;
+
+    @media (max-width: 1040px) {
+        & {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
 }
 
 .btn {
@@ -59,10 +69,6 @@ const nextImg = (): void => {
         right: 0;
         transform: translateY(-50%) rotateZ(180deg);
     }
-}
-
-.figure {
-    margin: 0 114px 25px;
 }
 
 .img {

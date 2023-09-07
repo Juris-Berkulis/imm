@@ -67,6 +67,20 @@ const quotesUrl: ComputedRef<string> = computed(() => {
         top: 0;
         left: 0;
     }
+
+    @media (max-width: 400px) {
+        & {
+            padding-left: 40px;
+        }
+
+        &::before {
+            content: '\201c';
+            font-size: 48px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 56px;
+        }
+    }
 }
 
 .serverHtml > blockquote > p {
@@ -91,6 +105,12 @@ const quotesUrl: ComputedRef<string> = computed(() => {
 .serverHtml > ul {
     margin-bottom: 20px;
     padding-left: 116px;
+
+    @media (max-width: 600px) {
+        & {
+            padding-left: 40px;
+        }
+    }
 }
 
 .serverHtml > ul > li {

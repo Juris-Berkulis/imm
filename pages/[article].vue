@@ -30,6 +30,12 @@ const blocksList: ComputedRef<Array<Block>> = computed(() => {
 .section {
     padding: 50px 0;
 
+    @media (max-width: 600px) {
+        & {
+            padding: 30px 0;
+        }
+    }
+
     &:first-of-type {
         padding-top: 0;
     }
