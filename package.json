@@ -4,6 +4,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "deploy_to_vercel": "vercel --prod && vercel list",
+    "deploy": "npm run build && npm run deploy_to_vercel",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

@@ -3,7 +3,7 @@ import { FetchResponse, Article } from '~/types';
 
 const route = useRoute();
 
-const { data: response } = await useFetch(`http://devtwit8.ru/api/v1/page/?path=${route.fullPath}`, {
+const { data: response } = await useFetch(`https://devtwit8.ru/api/v1/page/?path=${route.fullPath}`, {
     transform: (data: FetchResponse<'home'>) => data,
 });
 
