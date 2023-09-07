@@ -1,11 +1,31 @@
 <script setup lang="ts">
 import { Block, FetchResponse } from '~/types';
 
+definePageMeta({
+    validate: async (route) => {
+        const path: string | string[] = route.params.article;
+        if (typeof path === 'string') return /^article-\d+$/.test(path)
+        return false
+    },
+});
+
 const route = useRoute();
 
-const {data: response} = await useFetch(`https://devtwit8.ru/api/v1/page/?path=${route.fullPath}`, {
-    transform: (data: FetchResponse<'article'>) => data,
-});
+const response: Ref<FetchResponse<"article"> | null> = ref(null);
+
+try {
+    const {data} = await useFetch(`https://devtwit8.ru/api/v1/page/?path=${route.fullPath}`, {
+        transform: (data: FetchResponse<'article'>) => data,
+    });
+
+    if (data.value) {
+        response.value = data.value;
+    } else {
+        throw createError({ statusCode: 404, message: 'Ошибка при запросе!' })
+    }
+} catch (error) {
+    console.warn(error);
+}
 
 const blocksList: ComputedRef<Array<Block>> = computed(() => {
     return response.value?.body || []
