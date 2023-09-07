@@ -19,7 +19,7 @@ defineProps<Props>();
                 <BaseInput class="form__input" type="text" placeholder="Имя" />
                 <BaseInput class="form__input" type="tel" placeholder="Телефон" />
                 <BaseInput class="form__input" type="email" placeholder="Email" />
-                <BaseButton btnType="submit">Присоединиться</BaseButton>
+                <BaseButton type="submit">Присоединиться</BaseButton>
             </form>
         </div>
     </div>

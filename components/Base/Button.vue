@@ -1,13 +1,5 @@
-<script setup lang="ts">
-interface Props {
-    btnType: 'submit' | 'reset' | 'button',
-};
-
-defineProps<Props>();
-</script>
-
 <template>
-<button class="btn" :type="btnType">
+<button class="btn">
     <slot>Подписаться</slot>
 </button>
 </template>

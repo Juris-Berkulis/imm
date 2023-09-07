@@ -6,7 +6,7 @@ const inputId: string = Date.now().toString();
 <form class="form" @submit.prevent="console.log('Подписка оформлена')" method="post">
     <label class="form__label" :for="inputId">Подпишитесь на рассылку</label>
     <BaseInput class="form__input" type="text" :id="inputId" placeholder="Email" />
-    <BaseButton btnType="submit" />
+    <BaseButton type="submit" />
 </form>
 </template>
 
