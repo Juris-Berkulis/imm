@@ -13,7 +13,12 @@ const articlesList: ComputedRef<Article[]> = computed(() => {
 </script>
 
 <template>
-    <div class="homePage">
-        <ArticlesList :articlesList="articlesList" />
-    </div>
+<div class="homePage">
+    <Head>
+        <Title>{{ response?.meta.title }}</Title>
+        <Meta name="description" :content="response?.meta.description" />
+    </Head>
+
+    <ArticlesList :articlesList="articlesList" />
+</div>
 </template>

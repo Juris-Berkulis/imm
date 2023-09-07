@@ -17,6 +17,17 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'ru',
       },
+      title: 'Internet mass media',
+      meta: [
+        {
+          name: 'description',
+          content: 'Test app for mass media',
+        },
+        {
+          name: 'keywords',
+          content: 'Internet, mass, media',
+        },
+      ],
     },
   },
 });

@@ -14,6 +14,11 @@ const blocksList: ComputedRef<Array<Block>> = computed(() => {
 
 <template>
 <article>
+    <Head>
+        <Title>{{ response?.meta.title }}</Title>
+        <Meta name="description" :content="response?.meta.description" />
+    </Head>
+
     <template v-for="block of blocksList" :key="block.id">
         <BlocksArticleIntro class="section" v-if="block.type === 'article_intro_block'" :payload="block" />
         <BlocksArticleList class="section" v-else-if="block.type === 'article_list_block'" :payload="block" />
