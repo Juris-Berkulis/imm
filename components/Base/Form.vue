@@ -5,7 +5,7 @@ const inputId: string = Date.now().toString();
 <template>
 <form class="form" @submit.prevent="console.log('Подписка оформлена')" method="post">
     <label class="form__label" :for="inputId">Подпишитесь на рассылку</label>
-    <input class="form__input" type="text" :id="inputId" placeholder="Email">
+    <BaseInput class="form__input" type="text" :id="inputId" placeholder="Email" />
     <BaseButton btnType="submit" />
 </form>
 </template>
@@ -48,25 +48,7 @@ const inputId: string = Date.now().toString();
 }
 
 .form__input {
-    width: 100%;
-    max-width: 353px;
     margin-right: 87px;
-    padding: 0 5px;
-    border: none;
-    border-bottom: 1px solid #8d959c;
-    color: #8d959c;
-    background-color: transparent;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    transition: all 0.4s linear;
-
-    &:active, 
-    &:focus {
-        border-bottom: 1px solid #3657d3;
-    }
 
     @media (max-width: 1040px) {
         & {

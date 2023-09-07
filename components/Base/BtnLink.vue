@@ -27,5 +27,10 @@ defineProps<Props>();
     font-style: normal;
     font-weight: 400;
     line-height: 1;
+    transition: all 0.4s linear;
+
+    &:hover {
+        background-color: #3657d3;
+    }
 }
 </style>
