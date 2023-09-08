@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FetchResponse, Article } from '~/types';
+import { type FetchResponse, type Article } from '~/types';
 
 const route = useRoute();
 

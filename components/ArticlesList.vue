@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Article } from '~/types';
+import { type Article } from '~/types';
 
 interface Props {
     articlesList: Array<Article>,

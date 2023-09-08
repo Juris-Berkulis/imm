@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SliderBlock } from '~/types';
+import { type SliderBlock } from '~/types';
 
 interface Props {
     payload: SliderBlock,

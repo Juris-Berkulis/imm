@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Block, FetchResponse } from '~/types';
+import { type Block, type FetchResponse } from '~/types';
 
 definePageMeta({
     validate: async (route) => {

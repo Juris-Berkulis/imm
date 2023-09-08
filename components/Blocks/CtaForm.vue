@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CtaFormBlock } from '~/types';
+import { type CtaFormBlock } from '~/types';
 import ctaImg from '~/assets/img/ctaImg.png';
 
 interface Props {

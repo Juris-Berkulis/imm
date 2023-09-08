@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Article, ArticleListBlock } from '~/types';
+import { type Article, type ArticleListBlock } from '~/types';
 
 interface Props {
     payload: ArticleListBlock,

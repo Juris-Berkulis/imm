@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArticleLink } from '~/types';
+import { type ArticleLink } from '~/types';
 
 interface Props {
     to: ArticleLink,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TextBlock } from '~/types';
+import { type TextBlock } from '~/types';
 import quotes from '~/assets/icons/quotes.svg';
 
 interface Props {
